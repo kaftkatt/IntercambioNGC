@@ -62,12 +62,12 @@
 # ygOrigin=-60.,
 # dySpacing=1.,
 # dxSpacing=1.,
- delR=20*30,
+ delR=5,5,5,8,8,10,10,10,12,12,15,15,15,20,40,50,60,100,100,100,
  &
 
  &PARM05
- bathyFile='bathy2.bin',
- surfQnetFile='Qnet.bin',
+ bathyFile='HeatfluxGaussian/bathy.bin',
+ surfQnetFile='HeatfluxGaussian/Qnet.bin',
 # hydrogSaltFile= 'salinit2.bin',
 # zonalWindFile='windx.bin',
 # thetaClimFile='SST_relax.bin',
