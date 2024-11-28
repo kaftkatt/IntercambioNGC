@@ -1,0 +1,30 @@
+Second setup.  
+
+Information regarding the run: 
+
+Fluid text based on the data file that one  can find under 
+../input/HeatfluxGaussian. 
+And the size.h_mpi one can find under ../code. 
+
+The setup defines a rectangular basin, with 100 gridpoints in Y, 20 in X,
+with horizontal resolution 5 km. 
+It has 20 gridpoints in Z, size increasing with depth (as figure in InputVars.png)
+as such: 5,5,5,8,8,10,10,10,12,12,15,15,15,20,40,50,60,100,100,100,
+
+There is no stratification, temperature begin 15°C throughout. 
+Equation of state is linear with the thermal expansion coefficient being 2e-4. 
+
+It's run on the f-plane with f corresponding to 30 degrees north. 
+We have a free surface, and slip at the bottom and sides with drag being 1e-3. 
+
+It is run over 3 years with external forcing for 1 year. 
+
+Heatflux is defined as a gaussian curve with of maximum 93 W/m^2 km at the
+northern boundary. (see in InputVars.png)
+
+Q = 14000/ (sqrt(2.0 * pi) * 60) * e^((-(y/60)^2)/2)
+
+Bathymetry is defined as 600 m depth everywhere except at the northern
+(y=500 km), western (x=0) and eastern (x=100 km) walls. (InputVars.png)
+
+Open boundary is orlanski in the south. 
