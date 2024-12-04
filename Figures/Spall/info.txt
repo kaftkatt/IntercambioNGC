@@ -1,0 +1,39 @@
+Fourth setup.  
+
+Information regarding the run: 
+
+Fluid text based on the data file that one  can find under 
+../input/Spall.  
+
+The setup defines a rectangular basin, with 100 gridpoints in Y, 10 in X,
+with horizontal resolution 5 km. 
+It has 10 gridpoints in Z, size 60 m.
+
+There is no stratification, temperature begin 15°C throughout. 
+Equation of state is linear with the thermal expansion coefficient being 2e-4. 
+
+It's run on the f-plane with f corresponding to the mean of 22.92 to 31.70 °N. 
+We have a free surface, and slip at the bottom and sides with drag being 1e-3. 
+
+It is run over 10 years with external forcing for 2 months every year. 
+
+Heatflux is defined as a gaussian bump with of maximum 80 W/m^2 km at the
+Center. It is set as negative to indicate a gain of temperature in the water (see in InputVars.png)
+
+Bathymetry is defined as 600 m depth everywhere except at the northern
+(y=500 km), western (x=0) and eastern (x=100 km) walls. (InputVars.png)
+
+Open boundary is orlanski in the south.
+ 
+The output files show 
+Potential Temperature (THETA.png) 
+Hydrostatic Pressure Pot.(p/rho) Anomaly (PHIHYD.png)
+Zonal Component of Velocity (m/s) (UVEL.png)
+Meridional Component of Velocity (m/s) (VVEL.png)
+Vertical Component of Velocity (r_units/s) (WVEL.png)
+Zonal Transport of Density (URHOMASS.png)
+Meridional Transport of Density (VRHOMASS.png)
+Vertical Transport of Density (WRHOMASS.png)
+Meridional Transport of Zonal Momentum (m^2/s^2) (UV_VEL_Z.png)
+Vertical Transport of Zonal Momentum (WU_VEL.png)
+Vertical Transport of Meridional Momentum (WV_VEL.png)
