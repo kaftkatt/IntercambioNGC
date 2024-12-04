@@ -6,8 +6,9 @@
  useLinearSponge=.FALSE.,
  OBCSsponge_Salt=.FALSE.,
  OBCSsponge_Theta=.FALSE.,
- useOBCSbalance=.TRUE.,
  useOBCSprescribe=.TRUE.,
+ useOBCSbalance=.TRUE.,
+ useOBCSprescribe=.FALSE.,
  OBCS_balanceFacS=1.,
  OBCS_monitorFreq=1200.,
  OBStFile='tempOBCS.bin'
