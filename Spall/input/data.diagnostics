@@ -22,7 +22,7 @@
   fileName(1) = 'surfDiag',
   frequency(1) = 2592000.,
 
-  fields(1:5,2)  = 'THETA   ','PHIHYD  ',
+  fields(1:11,2)  = 'THETA   ','PHIHYD  ',
                    'UVEL    ','VVEL    ','WVEL    ',
                    'URHOMASS', 'VRHOMASS', 'WRHOMASS',
                    'UV_VEL_Z', 'WU_VEL  ', 'WV_VEL  ',
