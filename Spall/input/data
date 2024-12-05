@@ -68,7 +68,7 @@
  &PARM05
  bathyFile='bathy.bin',
  surfQnetFile='Qnet.bin',
-# hydrogThetaFile= 'tempinit.bin',
+ hydrogThetaFile= 'temperature.bin',
 # zonalWindFile='windx.bin',
 # thetaClimFile='SST_relax.bin',
  &

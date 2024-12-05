@@ -43,7 +43,7 @@ CEOP
       INTEGER Nr
       PARAMETER (
      &           sNx =  10,
-     &           sNy =  50,
+     &           sNy =  60,
      &           OLx =   2,
      &           OLy =   2,
      &           nSx =   1,
