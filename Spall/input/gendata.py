@@ -56,7 +56,7 @@ def gaussC(x, y, sigma, center):
 #Defining heatflux
 
 X,Xno=np.meshgrid(x,x)
-out=gauss2d(X,12,[10,10])*-80
+out=gauss2d(X,12,[10,10])*-360000
 Q=np.zeros((nx,ny,nt), dtype=dtype)
 Q[:,70:90,0]=out
 Q[:,70:90,1]=out
