@@ -1,0 +1,14 @@
+#!/bin/bash
+
+#SBATCH -J NoRBCS
+#SBATCH -p tsunami
+#SBATCH -o NoRBCS.out
+#SBATCH -e NoRBCS.err
+#SBATCH -n 4
+
+module load intelcompilers2022
+module load toolsCDFintel2022
+
+cd $SLURM_SUBMIT_DIR
+
+mpiexec -np $SLURM_NTASKS ./mitgcmuv > output.txt

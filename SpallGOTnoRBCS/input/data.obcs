@@ -1,0 +1,20 @@
+# Open-boundaries
+ &OBCS_PARM01
+ OB_Jsouth=20*1,
+ useOrlanskiSouth=.TRUE.,
+ useOBCSsponge=.FALSE.,
+ useLinearSponge=.FALSE.,
+ OBCSsponge_Salt=.FALSE.,
+ OBCSsponge_Theta=.FALSE.,
+ useOBCSprescribe=.TRUE.,
+ useOBCSbalance=.TRUE.,
+ useOBCSprescribe=.FALSE.,
+ OBCS_balanceFacS=1.,
+ OBCS_monitorFreq=1200.,
+ &
+
+# Orlanski parameters
+ &OBCS_PARM02
+ Cmax=1,
+ cVelTimeScale=2000.,
+ &
