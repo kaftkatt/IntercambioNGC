@@ -74,60 +74,6 @@ ho[0,:]=0
 ho[-1,:]=0
 ho[:,-1]=0
 
-'''
-#Plotting it 
-params = {'font.size': 8,
-          'figure.figsize': (7, 4),
-         'font.family':'sans'}
-pl.rcParams.update(params)
-plt.rcParams['figure.dpi'] = 300
-plt.rcParams['savefig.dpi'] = 300
-
-fig3 = plt.figure(constrained_layout=True)
-gs = fig3.add_gridspec(2, 5)
-ax = fig3.add_subplot(gs[0, 0:2])
-
-ax.plot(y,Q[10,:,0] )
-ax.set(xlabel='Distance [km]',ylabel='Heatflux [W/m$^2$]')
-
-ax = fig3.add_subplot(gs[1, 0:2])
-
-ax.plot(tempBo[10,:,0],-z )
-ax.set(xlabel='Temperature [°C]',ylabel='Depth [m]')
-
-
-ax = fig3.add_subplot(gs[:, 2])
-cax=ax.pcolormesh(x,y,Q[:,:,1].T)
-ax.axis('equal')
-cbar= plt.colorbar(cax)
-cbar.set_label('Heatflux [W/m$^2$]')
-ax.set(xlabel='Distance [km]',ylabel='Distance [km]')
-
-
-ax = fig3.add_subplot(gs[:, 3])
-
-cax=ax.pcolormesh(x,y,ho.T)
-ax.axis('equal')
-cbar= plt.colorbar(cax)
-cbar.set_label('Depth [m]')
-ax.set(xlabel='Distance [km]')
-ax.yaxis.set_tick_params(labelleft=False)
-
-ax = fig3.add_subplot(gs[:, 4])
-
-cax=ax.pcolormesh(x,y,T_mask[0,:,:].T)
-ax.axis('equal')
-cbar= plt.colorbar(cax)
-cbar.set_label('Restoring temperature area ')
-ax.set(xlabel='Distance [km]')
-ax.yaxis.set_tick_params(labelleft=False)
-
-
-
-fig3.patch.set_alpha(0.0)
-plt.savefig('../../IntercambioNGC/Figures/' + str(project) + '/InputVars.png', bbox_inches='tight')
-'''
-
 #Saving the files
 f = open('Qnet.bin','wb')
 write_with_byte_inversion(f, Q)
