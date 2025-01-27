@@ -1,0 +1,14 @@
+#!/bin/bash
+
+#SBATCH -J Balmin1
+#SBATCH -p tsunami
+#SBATCH -o Balmin1.out
+#SBATCH -e Balmin1.err
+#SBATCH -n 4
+
+module load intelcompilers2022
+module load toolsCDFintel2022
+
+cd $SLURM_SUBMIT_DIR
+
+mpiexec -np $SLURM_NTASKS ./mitgcmuv > output.txt

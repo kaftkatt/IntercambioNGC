@@ -1,0 +1,24 @@
+# Open-boundaries
+ &OBCS_PARM01
+ OB_Jsouth=40*1,
+ useOrlanskiSouth=.FALSE.,
+ useOBCSsponge=.TRUE.,
+ OBCS_monitorFreq=1200.,
+ useOBCSprescribe = .FALSE.,
+ useOBCSbalance=.TRUE.,
+ OBCS_balanceFacS=-1.,
+ &
+
+# Orlanski parameters
+ &OBCS_PARM02
+# Cmax=1,
+# cVelTimeScale=2000.,
+ &
+
+ &OBCS_PARM03
+ Urelaxobcsinner=1728000.E0,
+ Urelaxobcsbound=864000.E0,
+ Vrelaxobcsinner=1728000.E0,
+ Vrelaxobcsbound=864000.E0,
+ spongeThickness=20,
+  &
