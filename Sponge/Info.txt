@@ -1,0 +1,46 @@
+Explanation of what varies between runs. 
+
+Run:
+Sponge, no balance applied 
+
+Run2: 
+Balance applied, no relaxation time scales defined for the Sponge Parm3 as following:
+ &OBCS_PARM03
+ Urelaxobcsinner=1728000.E0,
+ Urelaxobcsbound=864000.E0,
+ Vrelaxobcsinner=1728000.E0,
+ Vrelaxobcsbound=864000.E0,
+ spongeThickness=20,
+  &
+
+Run3: 
+Balance and relaxation time scales defined in the sponge Parm3
+
+Run4: 
+Same as Run3 but I commented away the parts where orlanski conditions are defined 
+Nothing changed really as orlanski is set to undef in OBCS_OPTIONS.h
+
+Run5: 
+Added prescribed files for temperature and velocity (only UVEL) as OBSuFile and OBStFile
+Balance is off 
+Relaxation time scales are defined
+
+Run6: 
+Added prescribed files for temperature and velocity (Both u and v) as OBSuFile,OBSvFile and OBStFile
+Balance is off 
+Relaxation time scales are defined 
+
+Run7: 
+No prescribed files 
+Balance is on with OBCS_balanceFacS=-1.,
+Relaxation time scales are defined
+
+--------
+This is how velocities are calculated in my runs with velocities 
+#Values of velocity at open boundary
+u0=0.025
+uMerid=u0*np.ones((nx,nz,nt),dtype=dtype)
+
+v0=0.025
+vMerid=v0*np.ones((nx,nz,nt),dtype=dtype)+0.001
+vMerid[:,:,np.arange(1,12,2)]=vMerid[:,:,np.arange(1,12,2)]-0.002
