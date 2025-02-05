@@ -35,6 +35,27 @@ No prescribed files
 Balance is on with OBCS_balanceFacS=-1.,
 Relaxation time scales are defined
 
+Run8: 
+No prescribed files
+Balance is on. 
+
+&OBCS_PARM03
+ Urelaxobcsinner=864000.E0,
+ Urelaxobcsbound=43200.E0,
+ Vrelaxobcsinner=864000.E0,
+ Vrelaxobcsbound=43200.E0,
+ spongeThickness=15,
+
+Run9: 
+Prescribed temperature 
+Balance is on 
+&OBCS_PARM03
+ Urelaxobcsinner=864000.E0,
+ Urelaxobcsbound=43200.E0,
+ Vrelaxobcsinner=864000.E0,
+ Vrelaxobcsbound=43200.E0,
+ spongeThickness=15,
+
 --------
 This is how velocities are calculated in my runs with velocities 
 #Values of velocity at open boundary

@@ -3,16 +3,25 @@ import numpy as np  # numpy 1.23.5
 import matplotlib.pyplot as plt
 
 # ----------- Functions ----------------------------
-def make_dFrame(statsfile, col_names):
+def make_dFrame(statsfiles, col_names):
     '''Generate a pandas data frame from 
     MITgcm statistics text file statsfile, 
     with column names col_names (list)'''
-
-    with open(statsfile,'r') as file:
-        data=file.read().split('\n\n')
-    data=[i.split('\n') for i in data]
-    data_numeric = [np.array(sublist, dtype=np.float64) for sublist in data[:-1]]
-    df = pd.DataFrame(data_numeric).T
+    
+    data_numeric=[]
+    
+    for i in range(4):  
+        with open(statsfiles[i],'r') as file:
+              data=file.read().split('\n\n')
+        data=[i.split('\n') for i in data]
+        data_numeric.append([np.array(sublist, dtype=np.float64) for sublist in data[:-1]])
+    
+    data_all = []
+        
+    for i in range(len(col_names)):
+         data_all.append((data_numeric[0][i] + data_numeric[1][i] + data_numeric[2][i] + data_numeric[3][i])/4)
+    
+    df = pd.DataFrame(data_all).T
     df.columns = col_names
     return(df)
 
