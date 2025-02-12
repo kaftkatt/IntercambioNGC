@@ -11,4 +11,4 @@ module load toolsCDFintel2022
 
 cd $SLURM_SUBMIT_DIR
 
-mpiexec -np $SLURM_NTASKS ./mitgcmuv
+mpiexec -np $SLURM_NTASKS ./mitgcmuv 
