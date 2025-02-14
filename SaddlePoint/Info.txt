@@ -1,0 +1,19 @@
+Explanation of what varies between runs. 
+
+Run0:
+Sponge, with Balance on and 
+&OBCS_PARM03
+ Urelaxobcsinner=864000.E0,
+ Urelaxobcsbound=43200.E0,
+ Vrelaxobcsinner=864000.E0,
+ Vrelaxobcsbound=43200.E0,
+ spongeThickness=15,
+
+OBCS Prescribed temperature 15 at boundary
+OBCS Prescribed Salinity at 0
+Saltstepping is turned off. 
+
+Timestep is set to 120 s
+
+Bump in the middle
+

@@ -56,6 +56,20 @@ Balance is on
  Vrelaxobcsbound=43200.E0,
  spongeThickness=15,
 
+Run10: 
+Same as Run9
+BUT saltstepping is turned off. 
+AND prescribe OBCS Salt as 0. 
+Salinity is also defined in data as 10*0
+
+Run11: 
+Change timestep to 60 seconds to avoid abnormal behaviour in vertical velocity
+Error was found that the Heatflux had been centered wrong since changing
+resolution in x. 
+
+Run12: 
+Intent at having a bump.
+
 --------
 This is how velocities are calculated in my runs with velocities 
 #Values of velocity at open boundary
