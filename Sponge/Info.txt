@@ -70,6 +70,15 @@ resolution in x.
 Run12: 
 Intent at having a bump.
 
+
+#### CHANGED AMOUT OF DIAG FILES SO HAVE NEW CODE AND BUILD FILE #####
+
+Run13:
+Running the first three years with output every 6 months then doing pickup file to run
+with output every month until year 5. 
+
+
+
 --------
 This is how velocities are calculated in my runs with velocities 
 #Values of velocity at open boundary
