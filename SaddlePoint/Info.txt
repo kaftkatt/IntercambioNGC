@@ -17,3 +17,4 @@ Timestep is set to 120 s
 
 Bump in the middle
 
+Run2: 2D run with new code and running parameters. 
