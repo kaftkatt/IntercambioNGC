@@ -73,7 +73,7 @@ tempBo=15*np.ones((nx,nz,nt),dtype=dtype)
 salBo=np.zeros((nx,nz,nt),dtype=dtype)
 
 #Bathymetry definition
-dep=gaussian(np.arange(ny), ny/2, 10)*20000-Ho
+dep=-(gaussian(np.arange(ny), ny/2, 10)*20000-Ho)
 ho=np.tile(dep,(nx,1))
 ho[:,0]=0
 ho[:,-1]=0
