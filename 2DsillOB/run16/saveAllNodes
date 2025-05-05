@@ -1,0 +1,18 @@
+#!/bin/sh
+outdir="../output/${PWD##*/}"
+
+./monitorMITgcm STDOUT.0000
+mv statsMIT.txt $outdir/statsMIT0.txt
+./monitorMITgcm	STDOUT.0001
+mv statsMIT.txt	$outdir/statsMIT1.txt
+./monitorMITgcm	STDOUT.0002
+mv statsMIT.txt	$outdir/statsMIT2.txt
+./monitorMITgcm	STDOUT.0003
+mv statsMIT.txt	$outdir/statsMIT3.txt
+
+
+
+
+
+
+
