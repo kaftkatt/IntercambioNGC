@@ -55,7 +55,7 @@
  externForcingCycle=31104000.
  &
 
-# Gridding paramete√rs
+# Gridding parameters
  &PARM04
  usingCartesianGrid=.TRUE.,
  delX=1000.,
