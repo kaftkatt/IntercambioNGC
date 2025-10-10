@@ -5,6 +5,8 @@
  useOBCSsponge=.TRUE.,
  OBCS_monitorFreq=864000.,
  useOBCSbalance=.TRUE.,
+ OBCS_balanceFacN = 1.,
+ OBCS_balanceFacS = 1.,
  useOBCSprescribe=.TRUE.,
  OBStFile='tempOBCSs.bin',
  OBSsFile='salOBCS.bin',
