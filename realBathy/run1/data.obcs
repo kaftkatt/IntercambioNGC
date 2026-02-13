@@ -1,0 +1,25 @@
+# Open-boundaries
+ &OBCS_PARM01
+ OB_Jsouth=40*1,
+ OB_Jnorth=40*-1,
+ useOBCSsponge=.TRUE.,
+ OBCS_monitorFreq=864000.,
+ useOBCSbalance=.TRUE.,
+ useOBCSprescribe=.TRUE.,
+ OBStFile='tempOBCSs.bin',
+ OBSsFile='salOBCS.bin',
+ OBNtFile='tempOBCSs.bin',
+ OBNsFile='salOBCS.bin',
+ &
+
+# Orlanski parameters
+ &OBCS_PARM02
+# Cmax=1,
+# cVelTimeScale=2000.,
+ &
+
+ &OBCS_PARM03
+ Vrelaxobcsinner=1728000.,
+ Vrelaxobcsbound=864000.,
+ spongeThickness=20,
+ &
