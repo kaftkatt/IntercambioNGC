@@ -39,7 +39,7 @@
 
 # Time stepping parameters
  &PARM03
- startTime=864000.,
+ startTime=860.,
  endTime=62208000.,
  deltaT=30.,
  pickupSuff='ckptA',
