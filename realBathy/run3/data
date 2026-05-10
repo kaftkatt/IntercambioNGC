@@ -1,7 +1,7 @@
 # Model parameters
 # Continuous equation parameters
  &PARM01
- viscAh=10.,
+ viscAhGrid=0.03,
  viscAr=5.E-4,
  no_slip_sides=.FALSE.,
  no_slip_bottom=.FALSE.,
