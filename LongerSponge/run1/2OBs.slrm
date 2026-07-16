@@ -1,0 +1,15 @@
+#!/bin/bash
+
+#SBATCH -J Heat
+#SBATCH -p tsunami
+#SBATCH -N 3
+#SBATCH --ntasks=50
+
+module load intelcompilers2022
+module load toolsCDFintel2022
+
+cd $SLURM_SUBMIT_DIR
+
+ulimit -l unlimited
+
+mpiexec -np $SLURM_NTASKS ./mitgcmuv 

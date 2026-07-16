@@ -1,0 +1,82 @@
+# Model parameters
+# Continuous equation parameters
+ &PARM01
+ viscAh=1,
+ viscAr=1.E-5,
+ no_slip_sides=.TRUE.,
+ no_slip_bottom=.FALSE.,
+ bottomDragLinear=2.E-4,
+ sideDragFactor=1.,
+ diffKhT=0.1,
+ diffKrT=1.E-6,
+ implicitDiffusion=.TRUE.,
+ eosType='LINEAR',
+ tRef=80*8.,
+ sRef=80*34.,
+ f0=6.691298637438928e-05,
+ beta=0.,
+ selectCoriMap=0,
+ tAlpha=2.E-4,
+ sBeta=7.4E-4,
+ rhoNil=1026.35,
+ gravity=9.81,
+ rigidLid=.FALSE.,
+ tempAdvScheme=33,
+ implicitFreeSurface=.TRUE.,
+ exactConserv=.TRUE.,
+ saltStepping=.FALSE.,
+ staggerTimeStep=.TRUE.,
+ vectorInvariantMomentum=.TRUE.,
+ hFacMin=0.3,
+# globalFiles=.TRUE.,
+# readBinaryPrec=32,
+# writeBinaryPrec=32,
+# useSingleCPUio=.TRUE.,
+ &
+
+# Elliptic solver parameters
+ &PARM02
+ cg2dTargetResidual=1.E-7,
+ cg2dMaxIters=1000,
+ &
+
+# Time stepping parameters
+ &PARM03
+ startTime=0.,
+ endTime=311040000.,
+ deltaT=180.,
+# pickupSuff='ckptB',
+ pChkptFreq=622080000.,
+ chkptFreq=155520000.,
+ dumpFreq=15552000.,
+ monitorFreq=15552000.,
+ monitorSelect=2,
+# tauThetaClimRelax=2592000.,
+#-for longer run (100 yrs)
+# endTime = 3110400000.,
+# monitorFreq=2592000.,
+ periodicExternalForcing=.TRUE.,
+ externForcingPeriod=2592000.,
+ externForcingCycle=31104000.
+ &
+
+# Gridding parameters
+ &PARM04
+ usingCartesianGrid=.TRUE.,
+ delX=40*500.,
+# delY=504*504.,
+ delYFile='dy.bin',
+# xgOrigin=0.,
+# ygOrigin=-60.,
+# dySpacing=1.,
+# dxSpacing=1.,
+ delR=80*16.,
+ &
+
+ &PARM05
+ bathyFile='bathy.bin',
+# surfQnetFile='Qnet.bin',
+ hydrogThetaFile= 'temp.bin',
+# zonalWindFile='windx.bin',
+# thetaClimFile='SST_relax.bin',
+ &
